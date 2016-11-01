@@ -7,11 +7,11 @@ RUN dpkg-reconfigure locales
 
 RUN DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
-    apt-get install -y libsasl2-dev bzr mercurial libxmlsec1-dev graphviz && \
-    apt-get install -y python-cups python-dbus python-openssl python-libxml2 && \
-    apt-get install -y python-pip xfonts-base xfonts-75dpi npm vim && \
-    apt-get install -y libfreetype6-dev libpng12-dev libcups2-dev && \
-    apt-get install -y libpq-dev libjpeg8-dev libldap2-dev wget && \
+    apt-get install -y libsasl2-dev bzr mercurial libxmlsec1-dev python-pip graphviz \
+    python-cups python-dbus python-openssl python-libxml2 xfonts-base \
+    xfonts-75dpi npm git postgresql-client wget libpq-dev libjpeg8-dev libldap2-dev \
+    libfreetype6-dev libpng12-dev libcups2-dev python-numpy python-numpy-dev \
+    libffi-dev vim ghostscript && \
     apt-get clean && \
     npm install -g less less-plugin-clean-css && \
     ln -sf /usr/bin/nodejs /usr/bin/node && \
